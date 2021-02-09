@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		41E4D20F25D285480077E3F6 /* DefferedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E4D20E25D285480077E3F6 /* DefferedObject.swift */; };
+		41E4D21425D2B9940077E3F6 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E4D21325D2B9940077E3F6 /* Inject.swift */; };
+		41E4D21925D2B9B00077E3F6 /* InjectableProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E4D21825D2B9B00077E3F6 /* InjectableProtocols.swift */; };
+		41E4D21E25D2BA140077E3F6 /* TestableInject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E4D21D25D2BA140077E3F6 /* TestableInject.swift */; };
 		DB3B074B25CC6F8300FF4863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B074A25CC6F8300FF4863 /* AppDelegate.swift */; };
 		DB3B074D25CC6F8300FF4863 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B074C25CC6F8300FF4863 /* SceneDelegate.swift */; };
 		DB3B074F25CC6F8300FF4863 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B074E25CC6F8300FF4863 /* ViewController.swift */; };
@@ -38,6 +41,9 @@
 
 /* Begin PBXFileReference section */
 		41E4D20E25D285480077E3F6 /* DefferedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefferedObject.swift; sourceTree = "<group>"; };
+		41E4D21325D2B9940077E3F6 /* Inject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inject.swift; sourceTree = "<group>"; };
+		41E4D21825D2B9B00077E3F6 /* InjectableProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectableProtocols.swift; sourceTree = "<group>"; };
+		41E4D21D25D2BA140077E3F6 /* TestableInject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestableInject.swift; sourceTree = "<group>"; };
 		DB3B074725CC6F8300FF4863 /* Injectable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Injectable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3B074A25CC6F8300FF4863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3B074C25CC6F8300FF4863 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +144,9 @@
 			isa = PBXGroup;
 			children = (
 				DB3B077E25CF1BB600FF4863 /* Assembly.swift */,
+				41E4D21325D2B9940077E3F6 /* Inject.swift */,
+				41E4D21825D2B9B00077E3F6 /* InjectableProtocols.swift */,
+				41E4D21D25D2BA140077E3F6 /* TestableInject.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -272,9 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41E4D21E25D2BA140077E3F6 /* TestableInject.swift in Sources */,
 				DB3B074F25CC6F8300FF4863 /* ViewController.swift in Sources */,
 				DB3B077F25CF1BB600FF4863 /* Assembly.swift in Sources */,
+				41E4D21425D2B9940077E3F6 /* Inject.swift in Sources */,
 				41E4D20F25D285480077E3F6 /* DefferedObject.swift in Sources */,
+				41E4D21925D2B9B00077E3F6 /* InjectableProtocols.swift in Sources */,
 				DB3B074B25CC6F8300FF4863 /* AppDelegate.swift in Sources */,
 				DB3B074D25CC6F8300FF4863 /* SceneDelegate.swift in Sources */,
 			);

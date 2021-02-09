@@ -2,10 +2,10 @@ import UIKit
 
 final class ViewController: UIViewController {
     
-    @Inject(SOmeService.self)
-    var appDeeplinks: YBMAppDelegateDeeplinksPr
-    @Inject(SOmeService.self)
-    var appDeeplinks: YBMAppDelegateDeeplinksPr
+    @Inject(SomeService.self) var someService
+    @Inject(YBMAppDelegateDeeplinks.self) var YBMAppDelegateDeeplinksPr
+    
+    
     @Inject(YMTAppRouter.self) var appRouter
     @Inject(YMTRoutes.self) var routes
     @Inject(DeeplinkProccessorTracker.self) var deeplinkTracker
@@ -17,9 +17,6 @@ final class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        print("appDeeplinks uuid =", appDeeplinks.uuid,
-//              "| appRouter uuid =", appDeeplinks.appRouter.uuid
-//        )
         print("----------------")
         print("appRouter uuid =", appRouter.uuid,
               "| deeplinkTracker uuid =", appRouter.deeplinkTracker.uuid,
@@ -52,37 +49,6 @@ final class ViewController: UIViewController {
     }
 }
 
-@propertyWrapper
-struct Inject<Type> {
-
-    typealias ServiceType = Type
-
-    let wrappedValue: ServiceType
-    
-    init<Service: InjectableSingleton>(_ type: Service.Type) where Service.ServiceType == ServiceType {
-        if let service = Assembly.shared.resolve(ServiceType.self) as? Service,
-           let wrappedValue = service as? ServiceType {
-            self.wrappedValue = wrappedValue
-        } else {
-            Assembly.shared.register(lifetime: .singleton(lazy: true), initCall: Service.initialize)
-            self.wrappedValue = Assembly.shared.resolve()
-        }
-    }
-    
-    init<Service: InjectablePrototype>(_ type: Service.Type) where Service.ServiceType == ServiceType {
-        self.wrappedValue = Service.initialize()
-    }
-    
-}
-
-protocol InjectableSingleton {
-    associatedtype ServiceType
-    static func initialize() -> ServiceType
-}
-protocol InjectablePrototype {
-    associatedtype ServiceType
-    static func initialize() -> ServiceType
-}
 
 // Пример с любым контроллером и роутером
 
@@ -97,26 +63,23 @@ final class SKURouter: InjectablePrototype {
     let uuid = UUID().uuidString
 }
 
-
-// Пример из проекта в DeeplinkAssembly
-
-
 protocol  YBMAppDelegateDeeplinksPr {
     func configure()
 }
 
-final class SOmeService: YBMAppDelegateDeeplinksPr, InjectableSingleton {
+final class SomeService: YBMAppDelegateDeeplinksPr, InjectableSingleton {
     func configure() {
         
     }
     
     typealias ServiceType = YBMAppDelegateDeeplinksPr
     static func initialize() -> YBMAppDelegateDeeplinksPr {
-        SOmeService()
+        SomeService()
     }
 }
+
 // was objectGraph
-final class YBMAppDelegateDeeplinks: YBMAppDelegateDeeplinksPr, InjectableSingleton {
+final class YBMAppDelegateDeeplinks: YBMAppDelegateDeeplinksPr, InjectablePrototype {
     typealias ServiceType = YBMAppDelegateDeeplinksPr
     static func initialize() -> YBMAppDelegateDeeplinksPr {
         YBMAppDelegateDeeplinks()
@@ -180,3 +143,6 @@ final class SomeObject: InjectablePrototype {
     typealias ServiceType = DeferredObject<SomeObject>
     
 }
+
+
+
