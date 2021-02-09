@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41E4D20F25D285480077E3F6 /* DefferedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E4D20E25D285480077E3F6 /* DefferedObject.swift */; };
 		DB3B074B25CC6F8300FF4863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B074A25CC6F8300FF4863 /* AppDelegate.swift */; };
 		DB3B074D25CC6F8300FF4863 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B074C25CC6F8300FF4863 /* SceneDelegate.swift */; };
 		DB3B074F25CC6F8300FF4863 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B074E25CC6F8300FF4863 /* ViewController.swift */; };
@@ -16,8 +17,6 @@
 		DB3B076225CC6F8B00FF4863 /* InjectableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B076125CC6F8B00FF4863 /* InjectableTests.swift */; };
 		DB3B076D25CC6F8B00FF4863 /* InjectableUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B076C25CC6F8B00FF4863 /* InjectableUITests.swift */; };
 		DB3B077F25CF1BB600FF4863 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B077E25CF1BB600FF4863 /* Assembly.swift */; };
-		DB3B078425CF1BD800FF4863 /* Assembly+SwizzledInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B078325CF1BD800FF4863 /* Assembly+SwizzledInit.swift */; };
-		DB3B078925CF1BF500FF4863 /* AssemblyActivator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB3B078825CF1BF500FF4863 /* AssemblyActivator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41E4D20E25D285480077E3F6 /* DefferedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefferedObject.swift; sourceTree = "<group>"; };
 		DB3B074725CC6F8300FF4863 /* Injectable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Injectable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB3B074A25CC6F8300FF4863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB3B074C25CC6F8300FF4863 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +53,6 @@
 		DB3B076C25CC6F8B00FF4863 /* InjectableUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectableUITests.swift; sourceTree = "<group>"; };
 		DB3B076E25CC6F8B00FF4863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB3B077E25CF1BB600FF4863 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
-		DB3B078325CF1BD800FF4863 /* Assembly+SwizzledInit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembly+SwizzledInit.swift"; sourceTree = "<group>"; };
-		DB3B078825CF1BF500FF4863 /* AssemblyActivator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssemblyActivator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +111,7 @@
 				DB3B075325CC6F8A00FF4863 /* Assets.xcassets */,
 				DB3B075525CC6F8A00FF4863 /* LaunchScreen.storyboard */,
 				DB3B075825CC6F8A00FF4863 /* Info.plist */,
+				41E4D20E25D285480077E3F6 /* DefferedObject.swift */,
 			);
 			path = Injectable;
 			sourceTree = "<group>";
@@ -139,8 +138,6 @@
 			isa = PBXGroup;
 			children = (
 				DB3B077E25CF1BB600FF4863 /* Assembly.swift */,
-				DB3B078325CF1BD800FF4863 /* Assembly+SwizzledInit.swift */,
-				DB3B078825CF1BF500FF4863 /* AssemblyActivator.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -276,9 +273,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB3B074F25CC6F8300FF4863 /* ViewController.swift in Sources */,
-				DB3B078925CF1BF500FF4863 /* AssemblyActivator.swift in Sources */,
 				DB3B077F25CF1BB600FF4863 /* Assembly.swift in Sources */,
-				DB3B078425CF1BD800FF4863 /* Assembly+SwizzledInit.swift in Sources */,
+				41E4D20F25D285480077E3F6 /* DefferedObject.swift in Sources */,
 				DB3B074B25CC6F8300FF4863 /* AppDelegate.swift in Sources */,
 				DB3B074D25CC6F8300FF4863 /* SceneDelegate.swift in Sources */,
 			);
